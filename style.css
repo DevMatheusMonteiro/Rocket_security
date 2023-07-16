@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --black: #2f2e41;
+  --green: #00bfa6;
+  --gray: #c2c2c2;
+  --white: #ffffff;
+  --JetBrains-Mono: "JetBrains Mono", monospace;
+  --Open-Sans: "Open Sans", sans-serif;
+}
+
+body {
+  position: relative;
+  font-family: var(--JetBrains-Mono);
+  background-color: var(--black);
+  color: var(--white);
+}
+
+a {
+  color: var(--white);
+  text-decoration: none;
+}
+
+.page {
+  min-height: 100vh;
+  max-width: 1380px;
+  padding: 73px 1% 23px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navigation_list {
+  list-style: none;
+  display: flex;
+  column-gap: 64px;
+}
+
+.navigation_list li a:hover {
+  font-weight: bold;
+  color: var(--gray);
+}
+
+.title_paragraphs {
+  display: flex;
+  flex-direction: column;
+  row-gap: 60px;
+  text-align: center;
+}
+
+.title_paragraphs h1 {
+  font-size: 2.25rem;
+}
+
+.woman_and_computer {
+  max-width: 400px;
+  width: 50%;
+}
+
+.paragraphs {
+  max-width: 590px;
+  font-size: 1rem;
+  font-family: var(--Open-Sans);
+  text-align: center;
+}
+
+.paragraphs p + p {
+  margin-top: 28px;
+}
+
+footer p {
+  margin: 0 auto;
+  text-align: center;
+  max-width: 568px;
+  border-top: 1px solid var(--green);
+  font-size: 0.875rem;
+  padding-top: 27px;
+}
+
+.padlock_decoration {
+  max-width: 51px;
+  width: 100%;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+}
+
+@media screen and (max-width: 693px) {
+  .padlock_decoration {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 507px) {
+  .page {
+    padding-top: 20px;
+  }
+  .header {
+    flex-direction: column;
+  }
+
+  .navigation_list {
+    border-top: 1px solid var(--green);
+    width: 90%;
+    margin-top: 20px;
+    padding-top: 20px;
+    justify-content: center;
+    column-gap: 10px;
+  }
+
+  .image_title_paragraphs {
+    margin-top: 20px;
+    flex-direction: column;
+  }
+
+  footer {
+    margin-top: 20px;
+  }
+}
+
+@media screen and (max-width: 1397px) and (max-height: 454px) {
+  .padlock_decoration {
+    display: none;
+  }
+}
